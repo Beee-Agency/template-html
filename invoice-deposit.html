@@ -13,7 +13,9 @@
       <p style="color: #fdbb23; font-size: 36px; margin: 0">
         Facture d'acompte
       </p>
-      <p style="margin: 0; margin-top: 4px; color: #71717a">Nº D-2025-0002</p>
+      <p style="margin: 0; margin-top: 4px; color: #71717a">
+        Nº {{invoice_number}}
+      </p>
     </div>
     <div style="display: flex; gap: 160px; margin-top: 37px">
       <div>
@@ -43,31 +45,29 @@
         </div>
         <div style="margin-top: 16px">
           <p style="margin: 0; font-size: 12px; color: #71717a">
-            Date d’émission : <span style="color: #05070b">10/02/2025</span>
+            Date d’émission : <span style="color: #05070b">{{today_date}}</span>
           </p>
           <p
             style="margin: 0; font-size: 12px; color: #71717a; padding-top: 4px"
           >
             Date de vente de la prestation :
-            <span style="color: #05070b">10/02/2025</span>
+            <span style="color: #05070b">{{today_date}}</span>
           </p>
         </div>
       </div>
       <div>
-        <p style="margin: 0">John</p>
+        <p style="margin: 0">{{prenom}}</p>
         <div style="margin-top: 8px">
-          <p style="margin: 0; font-size: 12px; color: #71717a">
-            john.doee@gmail.com
+          <p style="margin: 0; font-size: 12px; color: #71717a">{{mail}}</p>
+          <p
+            style="margin: 0; font-size: 12px; color: #71717a; padding-top: 4px"
+          >
+            {{compagny}}
           </p>
           <p
             style="margin: 0; font-size: 12px; color: #71717a; padding-top: 4px"
           >
-            123 rue Victore Hugo, 69001 Lyon
-          </p>
-          <p
-            style="margin: 0; font-size: 12px; color: #71717a; padding-top: 4px"
-          >
-            +33 7 01 01 01 01
+            {{phone}}
           </p>
         </div>
       </div>
@@ -118,7 +118,7 @@
           <div
             style="color: #384052; font-size: 10.94px; padding-left: 10.94px"
           >
-            Landing Page
+            {{name_of_service}}
           </div>
         </div>
         <div
@@ -169,7 +169,7 @@
           >
             Prix unitaire
           </div>
-          <div style="color: #384052; font-size: 10.94px">999.00€</div>
+          <div style="color: #384052; font-size: 10.94px">{{total_price}}</div>
         </div>
         <div
           style="
@@ -194,7 +194,7 @@
           >
             Montant HT
           </div>
-          <div style="color: #384052; font-size: 10.94px">499.50€</div>
+          <div style="color: #384052; font-size: 10.94px">{{price_halved}}</div>
         </div>
       </div>
     </div>
@@ -221,7 +221,8 @@
         <div>
           <div style="font-weight: 600; font-size: 9.11px">Solde</div>
           <div style="font-weight: 400; font-size: 9.11px">
-            Le solde restant de 499.50€ sera réglé à la fin de la préstation.
+            Le solde restant de {{price_halved}} sera réglé à la fin de la
+            préstation.
           </div>
         </div>
         <div>
@@ -253,7 +254,7 @@
           <div style="font-size: 10.94px; font-weight: 500; color: #111827">
             Total HT
           </div>
-          <div style="font-size: 10.94px; color: #111827">499.50€</div>
+          <div style="font-size: 10.94px; color: #111827">{{price_halved}}</div>
         </div>
         <div
           style="
