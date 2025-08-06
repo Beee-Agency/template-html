@@ -1,0 +1,267 @@
+<body
+  style="
+    margin: 0;
+    background-color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+  "
+>
+  <div style="width: 723px; padding-top: 38.61px">
+    <div>
+      <p style="color: #fdbb23; font-size: 36px; margin: 0">
+        Facture {{compagny}}
+      </p>
+      <p style="margin: 0; margin-top: 4px; color: #71717a">
+        {{invoice_number}}
+      </p>
+    </div>
+    <div style="display: flex; gap: 160px; margin-top: 37px">
+      <div>
+        <div>
+          <p style="margin: 0; color: #05070b">QUENTIN MENABEUF EI</p>
+          <p style="margin: 0; color: #05070b; padding-top: 4px">BEEE AGENCY</p>
+        </div>
+        <div style="margin-top: 8px">
+          <p style="margin: 0; font-size: 12px; color: #71717a">
+            contact@beee.agency
+          </p>
+          <p
+            style="margin: 0; font-size: 12px; color: #71717a; padding-top: 4px"
+          >
+            6 Rue du Fayé, 90170 Etueffont, France
+          </p>
+          <p
+            style="margin: 0; font-size: 12px; color: #71717a; padding-top: 4px"
+          >
+            Nº SIRET : 93244297300016
+          </p>
+          <p
+            style="margin: 0; font-size: 12px; color: #71717a; padding-top: 4px"
+          >
+            Code NAF : 7410Z
+          </p>
+        </div>
+        <div style="margin-top: 16px">
+          <p
+            style="margin: 0; font-size: 12px; color: #71717a; padding-top: 4px"
+          >
+            Date de vente de la prestation :
+            <span style="color: #05070b">{{today_date}}</span>
+          </p>
+        </div>
+      </div>
+      <div>
+        <p style="margin: 0">{{prenom}} {{nom}}</p>
+        <div style="margin-top: 8px">
+          <p style="margin: 0; font-size: 12px; color: #71717a">{{mail}}</p>
+          <p
+            style="margin: 0; font-size: 12px; color: #71717a; padding-top: 4px"
+          >
+            {{compagny}}
+          </p>
+          <p
+            style="margin: 0; font-size: 12px; color: #71717a; padding-top: 4px"
+          >
+            {{phone}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div style="margin-top: 20px; display: flex; gap: 3.65px">
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 13.92px;
+          "
+        >
+          <div
+            style="
+              width: 37.06px;
+              height: 29.47px;
+              background: #fdbb23;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 6px;
+              color: white;
+              font-size: 10.94px;
+            "
+          >
+            #
+          </div>
+          {{loop_index}}
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 13.92px">
+          <div
+            style="
+              width: 337px;
+              height: 29.47px;
+              background: #fdbb23;
+              display: flex;
+              align-items: center;
+              padding-left: 10.94px;
+              border-radius: 6px;
+              color: white;
+              font-size: 10.94px;
+            "
+          >
+            Désignation et description
+          </div>
+          {{loop_name_of_service}}
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 13.92px;
+          "
+        >
+          <div
+            style="
+              width: 96.91px;
+              height: 29.47px;
+              background: #fdbb23;
+              display: flex;
+              padding-left: 10.94px;
+              align-items: center;
+              border-radius: 6px;
+              color: white;
+              font-size: 10.94px;
+            "
+          >
+            Quantité
+          </div>
+          {{loop_quantity}}
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 13.92px;
+          "
+        >
+          <div
+            style="
+              width: 96.91px;
+              height: 29.47px;
+              background: #fdbb23;
+              display: flex;
+              padding-left: 10.94px;
+              align-items: center;
+              border-radius: 6px;
+              color: white;
+              font-size: 10.94px;
+            "
+          >
+            Prix unitaire
+          </div>
+          {{loop_unit_price}}
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 13.92px;
+          "
+        >
+          <div
+            style="
+              width: 96.91px;
+              height: 29.47px;
+              background: #fdbb23;
+              display: flex;
+              padding-left: 10.94px;
+              align-items: center;
+              border-radius: 6px;
+              color: white;
+              font-size: 10.94px;
+            "
+          >
+            Montant HT
+          </div>
+          {{loop_amount}}
+        </div>
+      </div>
+    </div>
+    <div
+      style="margin-top: 10px; width: 100%; height: 1px; background: #bababa"
+    ></div>
+    <div style="display: flex; justify-content: space-between">
+      <div
+        style="
+          margin-top: 19.44px;
+          display: flex;
+          flex-direction: column;
+          gap: 7.29px;
+          max-width: 280px;
+        "
+      >
+        <div>
+          <div style="font-weight: 600; font-size: 9.11px">Accompte</div>
+          <div style="font-weight: 400; font-size: 9.11px">
+            50% du montant total TTC, soit {{price_halved}} €, à verser à la
+            signature du devis.
+          </div>
+        </div>
+        <div>
+          <div style="font-weight: 600; font-size: 9.11px">Solde</div>
+          <div style="font-weight: 400; font-size: 9.11px">
+            Le solde restant de {{price_halved}} € sera réglé à la fin de la
+            préstation.
+          </div>
+        </div>
+        <div>
+          <div style="font-weight: 600; font-size: 9.11px">
+            Mode de paiement
+          </div>
+          <div style="font-weight: 400; font-size: 9.11px">
+            Virement effectué sur <a href="https://stripe.com/fr">Stripe</a>.
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          style="
+            margin-top: 19.44px;
+            background-color: #ededed;
+            padding-top: 7.23px;
+            padding-bottom: 7.23px;
+            padding-left: 10.94px;
+            padding-right: 10.94px;
+            max-height: fit-content;
+            border-radius: 6px;
+            width: 297px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+        >
+          <div style="font-size: 10.94px; font-weight: 500; color: #111827">
+            Total HT
+          </div>
+          <div style="font-size: 10.94px; color: #111827">
+            {{total_amount}} €
+          </div>
+        </div>
+        <div
+          style="
+            margin-top: 14.58px;
+            font-size: 10.94px;
+            font-weight: 500;
+            color: #384052;
+          "
+        >
+          TVA non applicable, art. 293 B du CGI
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
