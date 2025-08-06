@@ -11,10 +11,10 @@
   <div style="width: 723px; padding-top: 38.61px">
     <div>
       <p style="color: #fdbb23; font-size: 36px; margin: 0">
-        Facture d'acompte
+        Facture {{compagny}}
       </p>
       <p style="margin: 0; margin-top: 4px; color: #71717a">
-        Nº {{invoice_number}}
+        {{invoice_number}}
       </p>
     </div>
     <div style="display: flex; gap: 160px; margin-top: 37px">
@@ -44,9 +44,6 @@
           </p>
         </div>
         <div style="margin-top: 16px">
-          <p style="margin: 0; font-size: 12px; color: #71717a">
-            Date d’émission : <span style="color: #05070b">{{today_date}}</span>
-          </p>
           <p
             style="margin: 0; font-size: 12px; color: #71717a; padding-top: 4px"
           >
@@ -97,7 +94,7 @@
           >
             #
           </div>
-          <div style="color: #384052; font-size: 10.94px">1</div>
+          {{loop_index}}
         </div>
         <div style="display: flex; flex-direction: column; gap: 13.92px">
           <div
@@ -115,11 +112,7 @@
           >
             Désignation et description
           </div>
-          <div
-            style="color: #384052; font-size: 10.94px; padding-left: 10.94px"
-          >
-            {{name_of_service}}
-          </div>
+          {{loop_name_of_service}}
         </div>
         <div
           style="
@@ -144,7 +137,7 @@
           >
             Quantité
           </div>
-          <div style="color: #384052; font-size: 10.94px">0.5</div>
+          {{loop_quantity}}
         </div>
         <div
           style="
@@ -169,9 +162,7 @@
           >
             Prix unitaire
           </div>
-          <div style="color: #384052; font-size: 10.94px">
-            {{total_price}} €
-          </div>
+          {{loop_unit_price}}
         </div>
         <div
           style="
@@ -196,9 +187,7 @@
           >
             Montant HT
           </div>
-          <div style="color: #384052; font-size: 10.94px">
-            {{price_halved}} €
-          </div>
+          {{loop_amount}}
         </div>
       </div>
     </div>
@@ -218,15 +207,8 @@
         <div>
           <div style="font-weight: 600; font-size: 9.11px">Acompte</div>
           <div style="font-weight: 400; font-size: 9.11px">
-            Facturation correspondant à un acompte de 50 % sur la prestation
-            totale
-          </div>
-        </div>
-        <div>
-          <div style="font-weight: 600; font-size: 9.11px">Solde</div>
-          <div style="font-weight: 400; font-size: 9.11px">
-            Le solde restant de {{price_halved}} € sera réglé à la fin de la
-            préstation.
+            Aucun acompte n’a été versé. Le montant réglé correspond à
+            l’intégralité de la prestation.
           </div>
         </div>
         <div>
@@ -259,7 +241,7 @@
             Total HT
           </div>
           <div style="font-size: 10.94px; color: #111827">
-            {{price_halved}} €
+            {{total_amount}} €
           </div>
         </div>
         <div
